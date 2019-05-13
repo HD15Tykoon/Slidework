@@ -1,0 +1,126 @@
+/*
+**  Author: Harsh Dagar
+**  Lang: CSS
+*/
+:root{
+  --image_Location: "http://127.0.0.1:5500/carousel/";
+}
+body {
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+/*---------------Header design starts here----------*/
+/*--Original Block--*/
+header.original {
+  z-index: 50;
+  position: fixed;
+}
+
+header.local {
+  height: 20vh;
+}
+
+/*--Inside Block--*/
+.logo {
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  padding: 1em;
+  height: 10vh;
+  width: 26vh;
+  border-radius: 7px;
+  background: #000000;
+  transform: translate(50%, 50%);
+  overflow: hidden;
+}
+.logoText {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fa-yin-yang {
+  position: relative;
+  margin: auto;
+  color: rgba(56, 160, 56, 0.904);
+}
+.companyName {
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
+}
+.displayNone {
+  display: none;
+}
+
+/*---------------Header design ends here-------------*/
+.container {
+  height: 500vh;
+}
+
+.loremPar {
+  font-size: 4vmax;
+  filter: opacity(0.2);
+}
+
+.sweetText{
+  position: relative;
+}
+
+/*  Scroller class for element to show the scroll top values  */
+.scroller {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel{
+  width: 100vw;
+  height: 80vh;
+  z-index: 4;
+  background: url('/carousel/RE1AZ1v_1920x1080.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel_Content{
+  margin: auto;
+  display: flex;
+  width: 80%;
+  height: 20vh;
+  background: #2f3c869d;
+  justify-content: center;
+  align-items: baseline;
+  align-content: space-between;
+}
+.carousel_Text{
+  font-size: 2.5rem;
+  font-weight: 500!important;
+  color: whitesmoke;
+  text-decoration: underline;
+}
+@media screen and (max-width:600px){
+  .carousel_Content{
+    width: 50%;
+  }
+  .carousel_Btn{
+    margin: auto;
+  }
+}
+.carousel_Btn{
+  margin-left: 30%;
+  text-transform: uppercase;
+  user-select: none;
+  border: 1px solid white;
+  color: whitesmoke;
+  font-size: 120%;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+.carousel_Btn:hover{
+  background-color: whitesmoke;
+  color: rgb(75, 75, 75);
+}
